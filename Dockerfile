@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 COPY . /app
 
 # Ensure the entrypoint script exists and is executable
-RUN chmod +x /app/.github/scripts/entrypoint.sh /app/.github/scripts/update_readme.sh
+RUN chmod +x /app/.github/scripts/entrypoint.sh /app/.github/scripts/update_index.sh
 
 # Set the entrypoint to the entrypoint script
 ENTRYPOINT ["/app/.github/scripts/entrypoint.sh"]
